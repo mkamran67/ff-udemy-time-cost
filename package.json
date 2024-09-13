@@ -1,0 +1,19 @@
+{
+  "name": "ff-udemy-time-cost",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel watch src/**/*",
+    "build": "parcel build src/manifest.json && web-ext build --source-dir ./dist",
+    "start": "parcel build src/manifest.json && cp -f src/manifest.json ./dist/manifest.json && cp -rf icons ./dist/icons && web-ext run --source-dir ./dist"
+  },
+  "author": "Muhammad Kamran",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^5.6.2",
+    "web-ext": "^8.2.0",
+    "webextension-polyfill-ts": "^0.26.0"
+  }
+}
