@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Awesome Extension",
+  "version": "1.0",
+  "description": "A simple browser extension that does awesome things.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon.png"
+  },
+  "icons": {
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://www.udemy.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.udemy.com/*"],
+      "js": ["popup.js"]
+    }
+  ]
+}

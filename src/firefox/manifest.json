@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Udemy course total time calculator",
+  "version": "1.0",
+  "description": "A simple browser extension that calculates the total time of a Udemy course.",
+  "icons": {
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://www.udemy.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.udemy.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  }
+}

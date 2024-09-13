@@ -1,19 +1,33 @@
 {
-  "name": "ff-udemy-time-cost",
+  "name": "udemy-course-time-cost",
   "version": "1.0.0",
+  "description": "Udemy course total time calculator.",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel watch src/**/*",
-    "build": "parcel build src/manifest.json && web-ext build --source-dir ./dist",
-    "start": "parcel build src/manifest.json && cp -f src/manifest.json ./dist/manifest.json && cp -rf icons ./dist/icons && web-ext run --source-dir ./dist"
+    "build:chrome": "cross-env browser=chrome webpack --mode=production",
+    "build:firefox": "cross-env browser=firefox webpack --mode=production",
+    "build": "npm run build:chrome && npm run build:firefox",
+    "dev:chrome": "cross-env browser=chrome webpack --mode=development --watch",
+    "dev:firefox": "cross-env browser=firefox webpack --mode=development --watch",
+    "start:chrome": "npm run dev:chrome",
+    "start:firefox": "npm run dev:firefox"
   },
-  "author": "Muhammad Kamran",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "parcel-bundler": "^1.12.5",
-    "typescript": "^5.6.2",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "browser-sync": "^2.29.3",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.2",
+    "postcss": "^8.4.38",
+    "postcss-loader": "^8.1.1",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^3.4.4",
     "web-ext": "^8.2.0",
-    "webextension-polyfill-ts": "^0.26.0"
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
   }
 }
