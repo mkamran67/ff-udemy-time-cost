@@ -4,7 +4,6 @@
   "version": "1.0",
   "description": "A simple browser extension that does awesome things.",
   "action": {
-    "default_popup": "popup.html",
     "default_icon": "icons/icon.png"
   },
   "icons": {
@@ -16,7 +15,7 @@
   "content_scripts": [
     {
       "matches": ["https://www.udemy.com/*"],
-      "js": ["popup.js"]
+      "js": ["content.js"]
     }
   ]
 }

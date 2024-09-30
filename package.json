@@ -1,7 +1,7 @@
 {
-  "name": "udemy-course-time-cost",
+  "name": "udemy-course-time-completed",
   "version": "1.0.0",
-  "description": "Udemy course total time calculator.",
+  "description": "Calculates the total time you've watched and percentage completed of the current open",
   "main": "index.js",
   "scripts": {
     "build:chrome": "cross-env browser=chrome webpack --mode=production",
